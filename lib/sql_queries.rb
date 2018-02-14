@@ -28,10 +28,13 @@ def selects_most_prominent_color_and_returns_with_count
   "SELECT color, COUNT(color) FROM bears GROUP BY color ORDER BY COUNT(color) DESC LIMIT 1;"
 end
 
+# counts the number of bears with goofy temperaments
 def counts_number_of_bears_with_goofy_temperaments
-  "Write your SQL query here"
+  "SELECT COUNT(temperament) FROM bears WHERE temperament = 'goofy';"
 end
 
+# selects the bear that killed Tim
+# note: use 'name IS NULL', not 'name = NULL'
 def selects_bear_that_killed_Tim
-  "Write your SQL query here"
+  "SELECT * FROM bears WHERE name IS NULL;"
 end
